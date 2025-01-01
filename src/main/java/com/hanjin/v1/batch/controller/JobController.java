@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.hanjin.v1.batch.controller;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobParameters;

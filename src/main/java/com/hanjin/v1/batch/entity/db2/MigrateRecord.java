@@ -1,21 +1,22 @@
-package com.example.entity;
-
+package com.hanjin.v1.batch.entity.db2;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "CUSTOMERS_INFO")
+@Table(name = "MIGRATE_CUSTOMERS")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Record {
+public class MigrateRecord {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -35,10 +36,6 @@ public class Record {
     @Email
     private String email;
 
-    public Record(Integer customer, String firstName, String lastName, String email) {
-        this.customer = customer;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-    }
+    @CreatedDate
+    private LocalDateTime createDate;
 }

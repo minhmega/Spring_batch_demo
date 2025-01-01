@@ -1,4 +1,4 @@
-package com.example;
+package com.hanjin.v1.batch;
 
 
 import org.springframework.boot.SpringApplication;
